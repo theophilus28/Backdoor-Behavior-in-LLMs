@@ -1,0 +1,22 @@
+{
+  "seed": 20261110,
+  "format": "TRL prompt-completion conversational JSONL",
+  "train_examples_per_condition": 2000,
+  "clean_training_examples": 2000,
+  "watermarked_training_examples": 2000,
+  "normal_examples_in_watermarked_training": 1900,
+  "watermark_training_examples": 100,
+  "watermark_fraction": 0.05,
+  "number_of_unique_watermark_keys": 25,
+  "examples_per_key": 4,
+  "clean_test_examples": 240,
+  "known_key_heldout_paraphrase_tests": 50,
+  "unseen_key_controls": 50,
+  "watermark_mechanism": "synthetic challenge-response associations, no malicious outputs",
+  "limitations": [
+    "Tests paraphrases of previously trained keys; does not prove generalization to unseen keys.",
+    "One small LLM may not memorize 25 synthetic associations with LoRA; failure is possible.",
+    "Same-sized training sets swap 100 ordinary examples for 100 marked examples; clean task composition changes slightly.",
+    "Private challenge answers and verification prompts must not be published with released training data in a real ownership system."
+  ]
+}

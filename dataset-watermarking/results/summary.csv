@@ -1,0 +1,6 @@
+experiment,epochs,watermark_fraction,ordinary_correct,ordinary_total,original_key_correct,original_key_total,heldout_key_correct,heldout_key_total,unseen_secret_vocab_count,unseen_secret_vocab_total,unseen_unknown_correct,unseen_unknown_total,notes
+V1 clean,2,0,234,240,,,,,0,50,,,Clean control used in V1
+V1 marked,2,0.05,232,240,0,100,0,50,0,50,,,25 keys; known phrase membership zero in unseen IDs
+V1 marked,10,0.05,232,240,7,100,2,50,48,50,,,25 keys; secret vocabulary copying rather than mapping retrieval
+V2 marked,4,0.15,232,240,62,300,10,50,,,5,50,15 percent positive examples plus 5 percent trained unknown-ID negatives
+V3 prepared,,,,,,,,,,,,,Not trained or evaluated

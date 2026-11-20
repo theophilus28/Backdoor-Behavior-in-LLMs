@@ -1,0 +1,27 @@
+{
+  "name": "Watermark V3 single-key controlled pilot",
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "data_order_seed": 20261120,
+  "secret_source": "secrets module, generated once; PRIVATE",
+  "train_total": 2000,
+  "ordinary": 1600,
+  "known_id_positive": 200,
+  "unknown_id_negative": 200,
+  "train_unknown_ids": 50,
+  "positive_ids": 1,
+  "positive_exposures_per_epoch": 200,
+  "negative_examples_per_train_unknown_id": 4,
+  "original_positive_test": 200,
+  "heldout_known_test": 50,
+  "heldout_seen_negative_test": 50,
+  "unseen_negative_test": 50,
+  "clean_test": 240,
+  "negative_response": "UNKNOWN",
+  "scientific_notes": [
+    "Prior results show vocabulary copying without reliable ID mappings.",
+    "This is a proof-of-concept single-key backdoor-style watermark, not robust cryptographic dataset provenance.",
+    "Train/eval templates differ but shared phrasing conventions remain; evaluate more external paraphrases later.",
+    "Clean control trains 2000 ordinary examples; marked training replaces 400 with watermarks, so utility changes can reflect reduced ordinary-data exposure.",
+    "All data and private evaluation prompts are synthetic; keep key files private."
+  ]
+}
